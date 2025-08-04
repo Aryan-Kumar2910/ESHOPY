@@ -27,7 +27,7 @@ const AddProducts = () => {
     formData.append("description", product.description);
     formData.append("image", product.image); 
 
-   await axios.post("https://eshopy-2.onrender.com", formData);
+   await axios.post("https://eshopy-2.onrender.com/products", formData);
 
     alert("Product added!");
     setProduct({ name: "", price: "", description: "", image: null });
