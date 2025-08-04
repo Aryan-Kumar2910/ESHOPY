@@ -7,16 +7,12 @@ const ProductDetail = () => {
   const { productId } = useParams();
   const [product, setProduct] = useState(null);
 
-  // useEffect(() => {
-  //   axios.get(`https://eshopy-2.onrender.com${productId}`)
-  //     .then((res) => setProduct(res.data));
-  // }, [productId]);
-  
   useEffect(() => {
-    axios.get(`${import.meta.env.VITE_API_URL}/api/products`)
-      .then(res => setProducts(res.data))
-      .catch(err => console.error("Error fetching products:", err));
-  }, []);
+    axios.get(`https://eshopy-2.onrender.com${productId}`)
+      .then((res) => setProduct(res.data));
+  }, [productId]);
+  
+ 
 
 
   const addToCart = () => {
@@ -30,7 +26,7 @@ const ProductDetail = () => {
 
   return (
     <div className="detail-view">
-      <img src={`http://localhost:3000${product.image}`} width="250" alt={product.name} />
+      <img src={`https://eshopy-2.onrender.com${product.image}`} width="250" alt={product.name} />
       <h2>{product.name}</h2>
       <p>₹{product.price}</p>
       <p>{product.description}</p>
