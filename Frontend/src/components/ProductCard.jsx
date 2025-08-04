@@ -6,7 +6,7 @@ const ProductCard = ({ product, addToCart }) => {
   return (
     <div className="product-card">
       <img
-     src={`http://localhost:3000${product.image}`} 
+     src={`https://eshopy-2.onrender.com${product.image}`} 
       alt={product.name}
     onError={(e) => (e.target.src = "/images/placeholder.jpg")}
 />

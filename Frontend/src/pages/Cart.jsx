@@ -28,7 +28,7 @@ const Cart = () => {
             {cart.map((product) => (
               <div className="cart-item" key={product._id}>
                 <img
-                  src={`http://localhost:3000${product.image}`} 
+                  src={`https://eshopy-2.onrender.com${product.image}`} 
                   alt={product.name}
                   className="product-image"
                 />
