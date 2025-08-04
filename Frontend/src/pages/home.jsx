@@ -17,7 +17,7 @@ const Home = () => {
   };
 
   useEffect(() => {
-    axios.get("https://eshopy-2.onrender.com")
+    axios.get("https://eshopy-2.onrender.com/products")
       .then((res) => {
         const filtered = searchTerm
           ? res.data.filter(p =>
