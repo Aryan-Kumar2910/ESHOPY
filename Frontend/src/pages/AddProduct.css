@@ -1,0 +1,118 @@
+
+.add-form {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  background: linear-gradient(to bottom right, #ffffff, #f5f9ff);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.add-form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 2em;
+  color: #0073e6;
+  font-weight: 700;
+}
+
+.add-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.add-form input[type="text"],
+.add-form input[type="number"],
+.add-form textarea {
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95em;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fdfdfd;
+}
+
+.add-form input:focus,
+.add-form textarea:focus {
+  border-color: #0073e6;
+  box-shadow: 0 0 6px rgba(0, 115, 230, 0.3);
+  outline: none;
+}
+
+.add-form input[type="file"] {
+  background-color: #f0f0f0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+.add-form input[type="file"]::file-selector-button {
+  background: linear-gradient(to right, #0073e6, #005bb5);
+  border: none;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-weight: 600;
+}
+
+.add-form input[type="file"]::file-selector-button:hover {
+  background: linear-gradient(to right, #005bb5, #004494);
+}
+
+.add-form button[type="submit"] {
+  background: linear-gradient(to right, #28a745, #218838);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.add-form button[type="submit"]:hover {
+  background: linear-gradient(to right, #218838, #1c7730);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .add-form {
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  .add-form h2 {
+    font-size: 1.6em;
+  }
+}
+
+@media (max-width: 480px) {
+  .add-form {
+    padding: 15px;
+    margin: 15px auto;
+  }
+
+  .add-form h2 {
+    font-size: 1.4em;
+  }
+
+  .add-form input,
+  .add-form textarea,
+  .add-form button {
+    font-size: 0.85em;
+    padding: 10px;
+  }
+
+  .add-form input[type="file"]::file-selector-button {
+    font-size: 0.8em;
+    padding: 6px 10px;
+  }
+}
