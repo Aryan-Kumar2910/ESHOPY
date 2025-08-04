@@ -8,11 +8,6 @@ const userRoutes = require("./routes/userRoutes");
 
 const cors = require("cors");
 
-app.use(cors({
-  origin: "https://eshopy-3.onrender.com", 
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true,
-}));
 
 
 dotenv.config();
