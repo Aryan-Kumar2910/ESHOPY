@@ -7,10 +7,17 @@ const ProductDetail = () => {
   const { productId } = useParams();
   const [product, setProduct] = useState(null);
 
+  // useEffect(() => {
+  //   axios.get(`https://eshopy-2.onrender.com${productId}`)
+  //     .then((res) => setProduct(res.data));
+  // }, [productId]);
+  
   useEffect(() => {
-    axios.get(`https://eshopy-2.onrender.com${productId}`)
-      .then((res) => setProduct(res.data));
-  }, [productId]);
+    axios.get(`${import.meta.env.VITE_API_URL}/api/products`)
+      .then(res => setProducts(res.data))
+      .catch(err => console.error("Error fetching products:", err));
+  }, []);
+
 
   const addToCart = () => {
     const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
